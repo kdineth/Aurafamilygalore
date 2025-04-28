@@ -1,0 +1,1651 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Improved SEO Meta Tags -->
+    <meta name="description" content="First Ever Family Health & Nutraceutical shop in Kandy. Largest retailer and wholesaler in medical equipments and nutrition supplements.">
+    <meta name="keywords" content="medical equipment, nutrition supplements, wheelchairs, hospital beds, walking sticks, crutches, walkers, rollators, blood pressure meters, glucometers, nebulizers, Kandy, Sri Lanka">
+    <title>Aura Family Galore</title>
+    <link rel="icon" href="logo.png" type="image/svg+xml">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+        
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: 70px; /* For fixed header */
+        }
+        
+        body {
+            overflow-x: hidden;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        :root {
+            --primary-color: #4a90e2;
+            --secondary-color: #34495e;
+            --accent-color: #2ecc71;
+            --light-color: #f5f5f5;
+            --dark-color: #2c3e50;
+        }
+        
+        /* Header Styles */
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background-color: rgba(255, 255, 255, 0.95);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            padding: 15px 0;
+            z-index: 1000;
+            transition: all 0.3s ease;
+        }
+        
+        header.scrolled {
+            padding: 10px 0;
+            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+        
+        .logo img {
+            height: 45px;
+            margin-right: 10px;
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+        
+        nav ul li {
+            margin: 0 15px;
+        }
+        
+        nav ul li a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+            transition: color 0.3s ease;
+            position: relative;
+        }
+        
+        nav ul li a:hover {
+            color: var(--primary-color);
+        }
+        
+        nav ul li a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: var(--primary-color);
+            transition: width 0.3s ease;
+        }
+        
+        nav ul li a:hover::after {
+            width: 100%;
+        }
+        
+        .hamburger {
+            display: none;
+            cursor: pointer;
+            background: none;
+            border: none;
+            font-size: 24px;
+            color: #333;
+        }
+       /* Mobile Menu - Fixed */
+       .mobile-menu {
+            display: none;
+            position: fixed;
+            top: 70px;
+            left: 0;
+            right: 0;
+            background-color: white;
+            box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+            z-index: 999;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.5s ease-out;
+        }
+        
+        .mobile-menu.active {
+            display: block;
+            max-height: 300px; /* Increased value to ensure full visibility */
+        }
+        
+        .mobile-menu ul {
+            list-style: none;
+            padding: 20px;
+            margin: 0;
+        }
+        
+        .mobile-menu ul li {
+            margin: 15px 0;
+        }
+        
+        .mobile-menu ul li a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+            display: block;
+            padding: 7px;
+            transition: all 0.3s ease;
+        }
+        
+        .mobile-menu ul li a:hover {
+            background-color: #f5f7fa;
+            color: var(--primary-color);
+            border-radius: 5px;
+        }
+        
+        /* Hero Section */
+        #home {
+            padding-top: 80px;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero-container {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+            padding: 50px 20px;
+            z-index: 2;
+        }
+        
+        .hero-content {
+            flex: 1 1 500px;
+            padding: 20px;
+        }
+        
+        .hero-content h1 {
+            font-size: 2.5rem;
+            color: #2c3e50;
+            margin-bottom: 20px;
+            animation: fadeInUp 1s ease-out;
+        }
+        
+        .hero-content p {
+            font-size: 1.1rem;
+            margin-bottom: 30px;
+            color: #34495e;
+            max-width: 600px;
+            animation: fadeInUp 1.2s ease-out;
+        }
+        
+        .btn {
+            display: inline-block;
+            background-color: #4a90e2;
+            color: white;
+            padding: 12px 30px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(74, 144, 226, 0.3);
+            animation: fadeInUp 1.4s ease-out;
+        }
+        
+        .btn:hover {
+            background-color: #357bc8;
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(74, 144, 226, 0.4);
+        }
+        
+        .hero-image {
+            flex: 1 1 500px;
+            padding: 20px;
+            position: relative;
+            height: 400px;
+            animation: fadeIn 1.5s ease-out;
+        }
+        
+        .slider-container {
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            position: relative;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .slider {
+            display: flex;
+            height: 100%;
+            transition: transform 0.5s ease;
+        }
+        
+        .slider > div {
+            min-width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+        
+        .wave-divider {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 100px;
+            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 100"><path fill="%23ffffff" fill-opacity="1" d="M0,64L80,69.3C160,75,320,85,480,80C640,75,800,53,960,48C1120,43,1280,53,1360,58.7L1440,64L1440,100L1360,100C1280,100,1120,100,960,100C800,100,640,100,480,100C320,100,160,100,80,100L0,100Z"></path></svg>') no-repeat bottom center;
+            background-size: cover;
+            z-index: 1;
+        }
+        
+        /* Section Styles */
+        section {
+            padding: 80px 0;
+        }
+        
+        .section-header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        
+        .section-header h2 {
+            font-size: 2rem;
+            color: #2c3e50;
+            position: relative;
+            display: inline-block;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+        
+        .section-header h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 70px;
+            height: 3px;
+            background-color: #4a90e2;
+        }
+        
+        .section-header p {
+            max-width: 700px;
+            margin: 0 auto;
+            color: #555;
+        }
+        
+        /* Products Section */
+        #products {
+            background-color: #fff;
+        }
+        
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 30px;
+        }
+        
+        .product-card {
+            background-color: #fff;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+        }
+        
+        .product-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .product-image {
+            height: 200px;
+            overflow: hidden;
+        }
+        
+        .product-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        
+        .product-card:hover .product-image img {
+            transform: scale(1.1);
+        }
+        
+        .product-details {
+            padding: 20px;
+        }
+        
+        .product-details h3 {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+            color: #2c3e50;
+        }
+        
+        .product-details p {
+            font-size: 0.9rem;
+            color: #555;
+            margin-bottom: 15px;
+        }
+        
+        .product-price-action {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .product-price {
+            font-weight: 600;
+            color: #4a90e2;
+        }
+        
+        .shop-btn {
+            display: inline-block;
+            padding: 5px 15px;
+            background-color: #4a90e2;
+            color: white;
+            border-radius: 20px;
+            text-decoration: none;
+            font-size: 0.8rem;
+            font-weight: 500;
+            transition: background-color 0.3s;
+        }
+        
+        .shop-btn:hover {
+            background-color: #357bc8;
+        }
+        
+        /* About Section */
+        #about {
+            background-color: #f9f9f9;
+        }
+        
+        .about-container {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+        }
+        
+        .about-content {
+            flex: 1 1 500px;
+            padding: 20px;
+        }
+        
+        .about-content h3 {
+            font-size: 1.5rem;
+            color: #2c3e50;
+            margin-bottom: 20px;
+        }
+        
+        .about-content p {
+            margin-bottom: 15px;
+            color: #555;
+            line-height: 1.8;
+        }
+        
+        .why-choose-us {
+            margin-top: 30px;
+        }
+        
+        .why-choose-us h4 {
+            font-size: 1.2rem;
+            color: #2c3e50;
+            margin-bottom: 15px;
+        }
+        
+        .why-choose-us ul {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .why-choose-us ul li {
+            margin-bottom: 10px;
+            color: #555;
+            padding-left: 25px;
+            position: relative;
+        }
+        
+        .why-choose-us ul li span {
+            position: absolute;
+            left: 0;
+            top: 4px;
+            color: #4a90e2;
+            font-weight: bold;
+        }
+        
+        .about-image {
+            flex: 1 1 500px;
+            padding: 20px;
+        }
+        
+        .about-image-container {
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .about-image-container img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        
+        .chairman-message {
+            margin-top: 30px;
+            background-color: #fff;
+            border-radius: 10px;
+            padding: 25px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+        
+        .chairman-message h4 {
+            font-size: 1.2rem;
+            color: #2c3e50;
+            margin-bottom: 15px;
+        }
+        
+        .chairman-message p {
+            font-style: italic;
+            color: #555;
+            line-height: 1.8;
+            margin-bottom: 20px;
+        }
+        
+        .chairman-profile {
+            display: flex;
+            align-items: center;
+        }
+        
+        .chairman-image {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            overflow: hidden;
+            margin-right: 15px;
+        }
+        
+        .chairman-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .chairman-info h5 {
+            font-size: 1rem;
+            margin-bottom: 5px;
+            color: #2c3e50;
+        }
+        
+        .chairman-info p {
+            font-size: 0.8rem;
+            color: #4a90e2;
+            margin-bottom: 0;
+        }
+        
+        /* Services Section */
+        #services {
+            background-color: #fff;
+        }
+        
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .service-card {
+            background-color: #fff;
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease;
+            text-align: center;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .service-icon {
+            width: 70px;
+            height: 70px;
+            margin: 0 auto 20px;
+            background-color: rgba(74, 144, 226, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .service-icon i {
+            font-size: 30px;
+            color: #4a90e2;
+        }
+        
+        .service-card h3 {
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+            color: #2c3e50;
+        }
+        
+        .service-card p {
+            color: #555;
+            line-height: 1.7;
+        }
+        
+        /* Contact Section */
+        #contact {
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+        }
+        
+        .contact-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        
+        .contact-info, .contact-form {
+            flex: 1 1 350px;
+            padding: 20px;
+        }
+        
+        .contact-box {
+            background-color: #fff;
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            height: 100%;
+        }
+        
+        .contact-box h3 {
+            font-size: 1.3rem;
+            margin-bottom: 20px;
+            color: #2c3e50;
+        }
+        
+        .contact-item {
+            margin-bottom: 20px;
+        }
+        
+        .contact-item h4 {
+            font-size: 1.1rem;
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+        
+        .contact-item p {
+            color: #555;
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 5px;
+        }
+        
+        .contact-item p i {
+            margin-right: 10px;
+            color: #4a90e2;
+            margin-top: 4px;
+            width: 20px;
+            text-align: center;
+        }
+        
+        .social-icons {
+            margin-top: 30px;
+        }
+        
+        .social-icons h4 {
+            font-size: 1.1rem;
+            color: #2c3e50;
+            margin-bottom: 15px;
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 15px;
+        }
+        
+        .social-link {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: #4a90e2;
+            color: white;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+        }
+        
+        .social-link:hover {
+            background-color: #357bc8;
+            transform: translateY(-3px);
+        }
+        
+        .form-group {
+            margin-bottom: 15px;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-size: 0.9rem;
+            color: #555;
+        }
+        
+        .form-control {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 1rem;
+            transition: border-color 0.3s;
+        }
+        
+        .form-control:focus {
+            border-color: #4a90e2;
+            outline: none;
+        }
+        
+        textarea.form-control {
+            resize: vertical;
+            min-height: 120px;
+        }
+        
+        .submit-btn {
+            background-color: #4a90e2;
+            color: white;
+            padding: 12px 25px;
+            border: none;
+            border-radius: 5px;
+            font-size: 1rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            width: 100%;
+        }
+        
+        .submit-btn:hover {
+            background-color: #357bc8;
+        }
+        
+        .map-container {
+            flex: 1 1 100%;
+            padding: 20px;
+            margin-top: 20px;
+        }
+        
+        .map-box {
+            background-color: #fff;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+        
+        .map-box iframe {
+            width: 100%;
+            height: 400px;
+            border: 0;
+        }
+        
+        /* Footer */
+        footer {
+            background-color: #2c3e50;
+            color: #fff;
+            padding: 60px 0 20px;
+        }
+        
+        .footer-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin-bottom: 40px;
+        }
+        
+        .footer-about, .footer-links, .footer-products, .footer-newsletter {
+            flex: 1 1 250px;
+            padding: 0 20px;
+            margin-bottom: 30px;
+        }
+        
+        .footer-logo {
+            height: 40px;
+            margin-bottom: 20px;
+        }
+        
+        .footer-about p {
+            color: #c3cfe2;
+            line-height: 1.7;
+            margin-bottom: 20px;
+        }
+        
+        .footer-social {
+            display: flex;
+            gap: 15px;
+        }
+        
+        .footer-social a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            background-color: rgba(255, 255, 255, 0.1);
+            color: white;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+        }
+        
+        .footer-social a:hover {
+            background-color: #4a90e2;
+        }
+        
+        .footer-heading {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+            color: #fff;
+            position: relative;
+            padding-bottom: 10px;
+        }
+        
+        .footer-heading::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 40px;
+            height: 2px;
+            background-color: #4a90e2;
+        }
+        
+        .footer-links ul li, .footer-products ul li {
+            margin-bottom: 10px;
+        }
+        
+        .footer-links ul li a, .footer-products ul li a {
+            color: #c3cfe2;
+            text-decoration: none;
+            transition: color 0.3s;
+            display: block;
+        }
+        
+        .footer-links ul li a:hover, .footer-products ul li a:hover {
+            color: #fff;
+            padding-left: 5px;
+        }
+        
+        .footer-newsletter p {
+            color: #c3cfe2;
+            line-height: 1.7;
+            margin-bottom: 20px;
+        }
+        
+        .newsletter-form {
+            display: flex;
+        }
+        
+        .newsletter-input {
+            flex: 1;
+            padding: 10px;
+            border: none;
+            border-radius: 5px 0 0 5px;
+            font-size: 0.9rem;
+        }
+        
+        .newsletter-btn {
+            background-color: #4a90e2;
+            color: white;
+            border: none;
+            padding: 0 15px;
+            border-radius: 0 5px 5px 0;
+            cursor: pointer;
+        }
+        
+        .newsletter-btn:hover {
+            background-color: #357bc8;
+        }
+        
+        .footer-bottom {
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: 20px;
+            text-align: center;
+        }
+        
+        .footer-bottom p {
+            color: #c3cfe2;
+            font-size: 0.9rem;
+        }
+        
+        /* Back to Top Button */
+        .back-to-top {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            width: 40px;
+            height: 40px;
+            background-color: #4a90e2;
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            z-index: 99;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+        }
+        
+        .back-to-top.show {
+            opacity: 1;
+            visibility: visible;
+        }
+        
+        .back-to-top:hover {
+            background-color: #357bc8;
+            transform: translateY(-3px);
+        }
+        
+        /* Animations */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        /* Responsive Styles */
+        @media (max-width: 992px) {
+            .hero-content h1 {
+                font-size: 2.2rem;
+            }
+            
+            .hero-content p {
+                font-size: 1rem;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .hamburger {
+                display: block;
+            }
+            
+            nav ul {
+                display: none;
+            }
+            
+            .hero-content h1 {
+                font-size: 1.8rem;
+            }
+            
+            .section-header h2 {
+                font-size: 1.8rem;
+            }
+            
+            .product-card {
+                max-width: 320px;
+                margin: 0 auto;
+            }
+            
+            .about-content, .about-image {
+                flex: 1 1 100%;
+            }
+            
+            .chairman-message {
+                margin-top: 20px;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            section {
+                padding: 60px 0;
+            }
+            
+            .hero-content h1 {
+                font-size: 1.6rem;
+            }
+            
+            .hero-content p {
+                font-size: 0.9rem;
+            }
+            
+            .btn {
+                padding: 10px 25px;
+                font-size: 0.9rem;
+            }
+            
+            .hero-image {
+                height: 300px;
+            }
+            
+            .section-header h2 {
+                font-size: 1.6rem;
+            }
+            
+            .products-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .service-card {
+                padding: 20px;
+            }
+            
+            .service-icon {
+                width: 60px;
+                height: 60px;
+            }
+            
+            .contact-info, .contact-form {
+                flex: 1 1 100%;
+            }
+        }
+
+          /* Additional Mobile Menu Styles for Small Screens */
+          @media (max-width: 780px) {
+            .hamburger {
+                display: block;
+            }
+            
+            nav ul {
+                display: none;
+            }
+            
+            .mobile-menu {
+                display: block; /* Change from 'none' to 'block' */
+                max-height: 0; /* Start with 0 height */
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header/Navigation -->
+   <!-- Header/Navigation -->
+<header id="header">
+    <div class="container header-container">
+        <div class="logo">
+            <img src="logo.png" alt="Aura Family Galore Logo" style="height: 60px; margin-right: 15px;">
+            <div style="display: flex; flex-direction: column; justify-content: center;">
+                <span style="font-size: 28px; font-weight: 700; color: #4a90e2; line-height: 1.2;">Aura</span>
+                <span style="font-size: 20px; font-weight: 600; color: #34495e; line-height: 1.2;">Family Galore</span>
+            </div>
+        </div>
+        
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#products">Products</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        
+        <button class="hamburger" aria-label="Menu Toggle">
+            <i class="fas fa-bars"></i>
+        </button>
+    </div>
+    
+    <!-- Mobile Menu -->
+    <div class="mobile-menu">
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#products">Products</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </div>
+</header>
+
+    <!-- Hero Section -->
+    <section id="home">
+        <div class="container hero-container">
+            <div class="hero-content">
+                <h1>First Ever Family Health & Nutraceutical Shop in Kandy</h1>
+                <p>Largest retailer and wholesaler in medical equipment and nutrition supplements. For an incredibly easy life.</p>
+                <a href="#contact" class="btn">Contact Us</a>
+            </div>
+            
+            <div class="hero-image">
+                <div class="slider-container">
+                    <div class="slider">
+                        <div style="background-image: url('https://images.unsplash.com/photo-1631815588090-d4bfec5b1ccb?ixlib=rb-1.2.1&auto=format&fit=crop&w=1200&q=80');"></div>
+                        <div style="background-image: url('https://images.unsplash.com/photo-1586773860418-d37222d8fce3?ixlib=rb-1.2.1&auto=format&fit=crop&w=1200&q=80');"></div>
+                        <div style="background-image: url('https://images.unsplash.com/photo-1576091160550-2173dba999ef?ixlib=rb-1.2.1&auto=format&fit=crop&w=1200&q=80');"></div>
+                        <div style="background-image: url('https://images.unsplash.com/photo-1581093583449-8255a7d46e66?ixlib=rb-1.2.1&auto=format&fit=crop&w=1200&q=80');"></div>
+                        <div style="background-image: url('https://images.unsplash.com/photo-1581595219315-a187dd40c322?ixlib=rb-1.2.1&auto=format&fit=crop&w=1200&q=80');"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="wave-divider"></div>
+    </section>
+
+    <!-- Products Section -->
+    <section id="products">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our Products</h2>
+                <p>Explore our wide range of medical equipment and nutritional supplements designed to improve quality of life.</p>
+            </div>
+            
+            <div class="products-grid">
+                <!-- Product 1 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1586773860418-d37222d8fce3?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="Wheelchair">
+                    </div>
+                    <div class="product-details">
+                        <h3>Wheelchairs</h3>
+                        <p>Premium quality wheelchairs for maximum comfort and mobility.</p>
+                        <div class="product-price-action">
+                            <span class="product-price">Rs. 25,000</span>
+                            <a href="https://wa.me/94766555604?text=I'm%20interested%20in%20purchasing%20a%20wheelchair" target="_blank" class="shop-btn">Shop Now</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Product 2 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1631815588090-d4bfec5b1ccb?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="Hospital Bed">
+                    </div>
+                    <div class="product-details">
+                        <h3>Hospital Beds</h3>
+                        <p>Adjustable hospital beds for home and clinical use.</p>
+                        <div class="product-price-action">
+                            <span class="product-price">Rs. 75,000</span>
+                            <a href="https://wa.me/94766555604?text=I'm%20interested%20in%20purchasing%20a%20hospital%20bed" target="_blank" class="shop-btn">Shop Now</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Product 3 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1544982503-9f984c14501a?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="Walking Sticks">
+                    </div>
+                    <div class="product-details">
+                        <h3>Walking Sticks</h3>
+                        <p>Sturdy and reliable walking sticks for added stability.</p>
+                        <div class="product-price-action">
+                            <span class="product-price">Rs. 3,500</span>
+                            <a href="https://wa.me/94766555604?text=I'm%20interested%20in%20purchasing%20walking%20sticks" target="_blank" class="shop-btn">Shop Now</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Product 4 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1603398938378-e54eab446dde?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="Blood Pressure Meters">
+                    </div>
+                    <div class="product-details">
+                        <h3>BP Meters/ Glucometers</h3>
+                        <p>Accurate digital blood pressure monitoring devices and blood glucose monitoring devices.</p>
+                        <div class="product-price-action">
+                            <span class="product-price">Rs. 8,000</span>
+                            <a href="https://wa.me/94766555604?text=I'm%20interested%20in%20purchasing%20a%20BP%20meter" target="_blank" class="shop-btn">Shop Now</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Product 5 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="Nebulizers">
+                    </div>
+                    <div class="product-details">
+                        <h3>Nebulizers</h3>
+                        <p>Efficient nebulizers for respiratory treatment.</p>
+                        <div class="product-price-action">
+                            <span class="product-price">Rs. 6,500</span>
+                            <a href="https://wa.me/94766555604?text=I'm%20interested%20in%20purchasing%20a%20nebulizer" target="_blank" class="shop-btn">Shop Now</a>
+                        </div>
+                    </div>
+                </div>
+                
+    
+                
+                <!-- Product 7 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1626806787461-102c1a7f1c62?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="Walkers">
+                    </div>
+                    <div class="product-details">
+                        <h3>Walkers & Crutches</h3>
+                        <p>Stable walking aids for increased independence.</p>
+                        <div class="product-price-action">
+                            <span class="product-price">Rs. 12,000</span>
+                            <a href="https://wa.me/94766555604?text=I'm%20interested%20in%20purchasing%20a%20walker" target="_blank" class="shop-btn">Shop Now</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Product 9 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1601055283742-8b27e81b5553?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="Nutrition Supplements">
+                    </div>
+                    <div class="product-details">
+                        <h3>Nutrition Supplements</h3>
+                        <p>High-quality adult and baby nutritional supplements.</p>
+                        <div class="product-price-action">
+                            <span class="product-price">Rs. 3,200</span>
+                            <a href="https://wa.me/94766555604?text=I'm%20interested%20in%20purchasing%20nutrition%20supplements" target="_blank" class="shop-btn">Shop Now</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Product 10 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1584362917163-bc4d7bc2054c?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="Orthopedic Products">
+                    </div>
+                    <div class="product-details">
+                        <h3>Orthopedic Collection</h3>
+                        <p>Vast collection of orthopedic supports and braces.</p>
+                        <div class="product-price-action">
+                            <span class="product-price">Rs. 2,500</span>
+                            <a href="https://wa.me/94766555604?text=I'm%20interested%20in%20purchasing%20orthopedic%20products" target="_blank" class="shop-btn">Shop Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div style="text-align: center; margin-top: 40px;">
+                <a href="https://wa.me/94766555604?text=I'm%20interested%20in%20your%20products" target="_blank" class="btn">Browse All Products</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+        <div class="container">
+            <div class="section-header">
+                <h2>About Us</h2>
+                <p>Learn more about Aura Family Galore and our commitment to improving lives through quality medical equipment and nutrition supplements.</p>
+            </div>
+            
+            <div class="about-container">
+                <div class="about-content">
+                    <h3>Our Story</h3>
+                    <p>Aura Family Galore was established as the first ever Family Health & Nutraceutical shop in Kandy, with the vision to provide high-quality medical equipment and nutritional supplements to improve the quality of life for our customers.</p>
+                    <p>As the largest retailer and wholesaler in the region, we pride ourselves on offering a comprehensive range of products from trusted brands at competitive prices.</p>
+                    <p>Our dedicated team is committed to providing exceptional customer service and expert advice to help you find the right products for your specific needs.</p>
+                    
+                    <div class="why-choose-us">
+                        <h4>Why Choose Us?</h4>
+                        <ul>
+                            <li><span>✓</span> Wide range of high-quality products</li>
+                            <li><span>✓</span> Expert advice and personalized service</li>
+                            <li><span>✓</span> Competitive pricing and product guarantees</li>
+                            <li><span>✓</span> Convenient location in the heart of Kandy</li>
+                            <li><span>✓</span> Dedicated customer support</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="about-image">
+                    <div class="about-image-container">
+                        <img src="https://images.unsplash.com/photo-1530026186672-2cd00ffc50fe?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80" alt="Our Store">
+                    </div>
+                    
+                    <div class="chairman-message">
+                        <h4>A Message from our Chairman</h4>
+                        <p>"At Aura Family Galore, we are committed to enhancing the quality of life for our customers through innovative healthcare solutions. Our vision is to be the most trusted provider of medical equipment and nutritional supplements in Sri Lanka."</p>
+                        <div class="chairman-profile">
+                            <div class="chairman-image">
+                                <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-1.2.1&auto=format&fit=crop&w=200&q=80" alt="Chairman">
+                            </div>
+                            <div class="chairman-info">
+                                <h5>John Perera</h5>
+                                <p>Chairman, Aura Family Galore</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our Services</h2>
+                <p>Discover the range of services we offer to meet your healthcare needs.</p>
+            </div>
+            
+            <div class="services-grid">
+                <!-- Service 1 -->
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-shopping-cart"></i>
+                    </div>
+                    <h3>Retail Sales</h3>
+                    <p>Explore our extensive range of medical equipment and nutritional supplements available for purchase in-store or through our delivery service.</p>
+                </div>
+                
+                <!-- Service 2 -->
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-clipboard-list"></i>
+                    </div>
+                    <h3>Wholesale Distribution</h3>
+                    <p>We supply medical equipment and nutritional supplements to hospitals, clinics, pharmacies, and other healthcare facilities at competitive wholesale prices.</p>
+                </div>
+                
+                <!-- Service 3 -->
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>Consultation Services</h3>
+                    <p>Our team of experts provides personalized consultation to help you find the most suitable medical equipment and nutritional supplements for your specific needs.</p>
+                </div>
+                
+                <!-- Service 4 -->
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-bed"></i>
+                    </div>
+                    <h3>Equipment Rental</h3>
+                    <p>We offer rental services for select medical equipment such as hospital beds, wheelchairs, and mobility aids for short-term use.</p>
+                </div>
+                
+                <!-- Service 5 -->
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-book-medical"></i>
+                    </div>
+                    <h3>Education & Awareness</h3>
+                    <p>We conduct educational programs and workshops to raise awareness about health issues and the proper use of medical equipment and nutritional supplements.</p>
+                </div>
+                
+                <!-- Service 6 -->
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-truck"></i>
+                    </div>
+                    <h3>Delivery Services</h3>
+                    <p>We provide convenient delivery services for all our products within Kandy and surrounding areas, ensuring you receive your essential medical supplies without delay.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2>Contact Us</h2>
+                <p>Get in touch with us to learn more about our products and services or to place an order.</p>
+            </div>
+            
+            <div class="contact-container">
+                <div class="contact-info">
+                    <div class="contact-box">
+                        <h3>Get In Touch</h3>
+                        
+                        <div class="contact-item">
+                            <h4>Location</h4>
+                            <p>
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span>No: 683, Peradeniya road, Kandy, Sri Lanka</span>
+                            </p>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <h4>Contact</h4>
+                            <p>
+                                <i class="fas fa-phone"></i>
+                                <span><a href="https://wa.me/94766555604" target="_blank" style="color: #555;">+94 76 655 5604</a></span>
+                            </p>
+                            <p>
+                                <i class="fas fa-envelope"></i>
+                                <span>info@aurafamilygalore.com</span>
+                            </p>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <h4>Business Hours</h4>
+                            <p>
+                                <i class="far fa-clock"></i>
+                                <span>
+                                    Monday - Friday: 9:00 AM - 6:00 PM<br>
+                                    Saturday: 9:00 AM - 3:00 PM<br>
+                                    Sunday: Closed
+                                </span>
+                            </p>
+                        </div>
+                        
+                        <div class="social-icons">
+                            <h4>Follow Us</h4>
+                            <div class="social-links">
+                                <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                                <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                                <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                                <a href="https://wa.me/94766555604" target="_blank" class="social-link"><i class="fab fa-whatsapp"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contact-form">
+                    <div class="contact-box">
+                        <h3>Send Us a Message</h3>
+                        
+                        <form id="contact-form">
+                            <div class="form-group">
+                                <label for="name">Your Name</label>
+                                <input type="text" id="name" name="name" class="form-control" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="email">Your Email</label>
+                                <input type="email" id="email" name="email" class="form-control" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="phone">Your Phone</label>
+                                <input type="tel" id="phone" name="phone" class="form-control">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="message">Your Message</label>
+                                <textarea id="message" name="message" class="form-control" rows="5" required></textarea>
+                            </div>
+                            
+                            <button type="submit" class="submit-btn">Send Message</button>
+                        </form>
+                    </div>
+                </div>
+                
+                <div class="map-container">
+                    <div class="map-box">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3957.6759744312574!2d80.63211501477617!3d7.282903194748404!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae368cffb2972ad%3A0x2b7d3bd0b8da5dbb!2sPeradeniya%20Rd%2C%20Kandy!5e0!3m2!1sen!2slk!4v1650031892092!5m2!1sen!2slk" allowfullscreen="" loading="lazy"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        
+        <div class="container">
+            <div class="footer-container">
+                <div class="footer-about">
+                    <img class="footer-logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMTAwIj48dGV4dCB4PSI1MCIgeT0iNTAiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSIyNCIgZm9udC13ZWlnaHQ9ImJvbGQiIGZpbGw9IiNmZmZmZmYiPkF1cmE8L3RleHQ+PHRleHQgeD0iNTAiIHk9IjgwIiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMTgiIGZpbGw9IiNjM2NmZTIiPkZhbWlseSBHYWxvcmU8L3RleHQ+PC9zdmc+" alt="Aura Family Galore Logo">
+                    <p>First Ever Family Health & Nutraceutical shop in Kandy. Largest retailer and wholesaler in medical equipments and nutrition supplements.</p>
+                    <div class="footer-social">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="https://wa.me/94766555604" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-links">
+                    <h4 class="footer-heading">Quick Links</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#products">Products</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-products">
+                    <h4 class="footer-heading">Products</h4>
+                    <ul>
+                        <li><a href="#products">Wheelchairs</a></li>
+                        <li><a href="#products">Hospital Beds</a></li>
+                        <li><a href="#products">Walking Aids</a></li>
+                        <li><a href="#products">Medical Devices</a></li>
+                        <li><a href="#products">Nutritional Supplements</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-newsletter">
+                    <h4 class="footer-heading">Newsletter</h4>
+                    <p>Subscribe to our newsletter to receive updates on new products, special offers, and health tips.</p>
+                    <form class="newsletter-form">
+                        <input type="email" class="newsletter-input" placeholder="Your Email Address" required>
+                        <button type="submit" class="newsletter-btn">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 Aura Family Galore. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <a href="#" class="back-to-top" id="backToTop" aria-label="Back to Top">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+
+    <!-- JavaScript -->
+    <script>
+
+        document.addEventListener('DOMContentLoaded', function() {
+            // Mobile Menu Toggle
+            
+            
+            const hamburger = document.querySelector('.hamburger');
+            const mobileMenu = document.querySelector('.mobile-menu');
+            
+            hamburger.addEventListener('click', function() {
+                mobileMenu.classList.toggle('active');
+                hamburger.innerHTML = mobileMenu.classList.contains('active') ? 
+                    '<i class="fas fa-times"></i>' : '<i class="fas fa-bars"></i>';
+            });
+            
+            // Close mobile menu when clicking on a link
+            document.querySelectorAll('.mobile-menu a').forEach(link => {
+                link.addEventListener('click', function() {
+                    mobileMenu.classList.remove('active');
+                    hamburger.innerHTML = '<i class="fas fa-bars"></i>';
+                });
+            });
+            
+            // Sticky header
+            const header = document.getElementById('header');
+            window.addEventListener('scroll', function() {
+                if (window.scrollY > 100) {
+                    header.classList.add('scrolled');
+                } else {
+                    header.classList.remove('scrolled');
+                }
+            });
+            
+            // Image slider
+            const slider = document.querySelector('.slider');
+            const slides = document.querySelectorAll('.slider > div');
+            let currentSlide = 0;
+            
+            function nextSlide() {
+                currentSlide = (currentSlide + 1) % slides.length;
+                slider.style.transform = `translateX(-${currentSlide * 100}%)`;
+            }
+            
+            // Change slide every 5 seconds
+            setInterval(nextSlide, 5000);
+            
+            // Back to top button
+            const backToTopButton = document.getElementById('backToTop');
+            
+            window.addEventListener('scroll', function() {
+                if (window.scrollY > 500) {
+                    backToTopButton.classList.add('show');
+                } else {
+                    backToTopButton.classList.remove('show');
+                }
+            });
+            
+            backToTopButton.addEventListener('click', function(e) {
+                e.preventDefault();
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            });
+            
+            // Contact form submission
+            const contactForm = document.getElementById('contact-form');
+            
+            if (contactForm) {
+                contactForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    
+                    // Here you would typically send the form data to a server
+                    // For now, we'll just show an alert
+                    alert('Thank you for your message! We will get back to you soon.');
+                    contactForm.reset();
+                });
+            }
+            
+            // Newsletter form submission
+            const newsletterForm = document.querySelector('.newsletter-form');
+            
+            if (newsletterForm) {
+                newsletterForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    
+                    // Here you would typically send the form data to a server
+                    // For now, we'll just show an alert
+                    alert('Thank you for subscribing to our newsletter!');
+                    newsletterForm.reset();
+                });
+            }
+            
+            // Product card hover effect
+            const productCards = document.querySelectorAll('.product-card');
+            
+            productCards.forEach(card => {
+                card.addEventListener('mouseenter', function() {
+                    this.style.transform = 'translateY(-10px)';
+                    this.style.boxShadow = '0 15px 30px rgba(0, 0, 0, 0.1)';
+                    
+                    const image = this.querySelector('img');
+                    if (image) {
+                        image.style.transform = 'scale(1.1)';
+                    }
+                });
+                
+                card.addEventListener('mouseleave', function() {
+                    this.style.transform = 'translateY(0)';
+                    this.style.boxShadow = '0 5px 15px rgba(0, 0, 0, 0.05)';
+                    
+                    const image = this.querySelector('img');
+                    if (image) {
+                        image.style.transform = 'scale(1)';
+                    }
+                });
+            });
+            
+            // Smooth scrolling for all anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    // Skip back to top button as it has its own handler
+                    if (this.classList.contains('back-to-top')) return;
+                    
+                    e.preventDefault();
+                    
+                    document.querySelector(this.getAttribute('href')).scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                });
+            });
+            
+            // WhatsApp link direct functionality
+            const whatsappLinks = document.querySelectorAll('a[href^="https://wa.me"]');
+            
+            whatsappLinks.forEach(link => {
+                link.setAttribute('target', '_blank');
+                link.setAttribute('rel', 'noopener noreferrer');
+            });
+            
+            // Animate on scroll 
+            const animateElements = document.querySelectorAll('.product-card, .service-card, .about-content, .about-image');
+            
+            function checkScroll() {
+                animateElements.forEach(element => {
+                    const elementPosition = element.getBoundingClientRect().top;
+                    const windowHeight = window.innerHeight;
+                    
+                    if (elementPosition < windowHeight - 50) {
+                        element.style.opacity = '1';
+                        element.style.transform = 'translateY(0)';
+                    }
+                });
+            }
+            
+            // Set initial styles
+            animateElements.forEach(element => {
+                element.style.opacity = '0';
+                element.style.transform = 'translateY(20px)';
+                element.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+            });
+            
+            // Check scroll position on load and on scroll
+            window.addEventListener('load', checkScroll);
+            window.addEventListener('scroll', checkScroll);
+        });
+    </script>
+</body>
+</html>
+
+   
