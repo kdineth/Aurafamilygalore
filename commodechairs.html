@@ -1,0 +1,1359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Improved SEO Meta Tags -->
+    <meta name="description" content="High-quality commode chairs for all home care needs. Aura Family Galore - Largest retailer of medical equipment in Kandy, Sri Lanka.">
+    <meta name="keywords" content="commode chairs, bathroom aids, medical furniture, elderly care, disabled aids, Kandy, Sri Lanka">
+    <title>Commode Chairs - Aura Family Galore</title>
+    <link rel="icon" href="logo.png" type="image/svg+xml">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+        
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: 70px; /* For fixed header */
+        }
+        
+        body {
+            overflow-x: hidden;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        :root {
+            --primary-color: #4a90e2;
+            --secondary-color: #34495e;
+            --accent-color: #2ecc71;
+            --light-color: #f5f5f5;
+            --dark-color: #2c3e50;
+        }
+        
+        /* Header Styles */
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background-color: rgba(255, 255, 255, 0.95);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            padding: 15px 0;
+            z-index: 1000;
+            transition: all 0.3s ease;
+        }
+        
+        header.scrolled {
+            padding: 10px 0;
+            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+        
+        .logo img {
+            height: 45px;
+            margin-right: 10px;
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+        
+        nav ul li {
+            margin: 0 15px;
+        }
+        
+        nav ul li a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+            transition: color 0.3s ease;
+            position: relative;
+        }
+        
+        nav ul li a:hover {
+            color: var(--primary-color);
+        }
+        
+        nav ul li a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: var(--primary-color);
+            transition: width 0.3s ease;
+        }
+        
+        nav ul li a:hover::after {
+            width: 100%;
+        }
+        
+        .hamburger {
+            display: none;
+            cursor: pointer;
+            background: none;
+            border: none;
+            font-size: 24px;
+            color: #333;
+        }
+       /* Mobile Menu - Fixed */
+       .mobile-menu {
+            display: none;
+            position: fixed;
+            top: 70px;
+            left: 0;
+            right: 0;
+            background-color: white;
+            box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+            z-index: 999;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.5s ease-out;
+        }
+        
+        .mobile-menu.active {
+            display: block;
+            max-height: 300px; /* Increased value to ensure full visibility */
+        }
+        
+        .mobile-menu ul {
+            list-style: none;
+            padding: 20px;
+            margin: 0;
+        }
+        
+        .mobile-menu ul li {
+            margin: 15px 0;
+        }
+        
+        .mobile-menu ul li a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+            display: block;
+            padding: 7px;
+            transition: all 0.3s ease;
+        }
+        
+        .mobile-menu ul li a:hover {
+            background-color: #f5f7fa;
+            color: var(--primary-color);
+            border-radius: 5px;
+        }
+        
+        /* Hero Section */
+        .hero-section {
+            padding-top: 90px;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            min-height: 400px;
+            display: flex;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero-container {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+            padding: 50px 20px;
+            z-index: 2;
+        }
+        
+        .hero-content {
+            flex: 1 1 500px;
+            padding: 20px;
+        }
+        
+        .hero-content h1 {
+            font-size: 2.5rem;
+            color: #2c3e50;
+            margin-bottom: 20px;
+            animation: fadeInUp 1s ease-out;
+        }
+        
+        .hero-content p {
+            font-size: 1.1rem;
+            margin-bottom: 30px;
+            color: #34495e;
+            max-width: 600px;
+            animation: fadeInUp 1.2s ease-out;
+        }
+        
+        .btn {
+            display: inline-block;
+            background-color: #4a90e2;
+            color: white;
+            padding: 12px 30px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(74, 144, 226, 0.3);
+            animation: fadeInUp 1.4s ease-out;
+        }
+        
+        .btn:hover {
+            background-color: #357bc8;
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(74, 144, 226, 0.4);
+        }
+        
+        .hero-image {
+            flex: 1 1 500px;
+            padding: 20px;
+            position: relative;
+            height: 400px;
+            animation: fadeIn 1.5s ease-out;
+        }
+        
+        .hero-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            background-color: rgba(255, 255, 255, 0.3);
+            padding: 15px;
+        }
+        
+        .wave-divider {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 100px;
+            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 100"><path fill="%23ffffff" fill-opacity="1" d="M0,64L80,69.3C160,75,320,85,480,80C640,75,800,53,960,48C1120,43,1280,53,1360,58.7L1440,64L1440,100L1360,100C1280,100,1120,100,960,100C800,100,640,100,480,100C320,100,160,100,80,100L0,100Z"></path></svg>') no-repeat bottom center;
+            background-size: cover;
+            z-index: 1;
+        }
+        
+        /* Breadcrumb */
+        .breadcrumb {
+            background-color: var(--light-color);
+            padding: 10px 0;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .breadcrumb-list {
+            display: flex;
+            list-style: none;
+            flex-wrap: wrap;
+        }
+        
+        .breadcrumb-item {
+            font-size: 0.9rem;
+            color: #777;
+        }
+        
+        .breadcrumb-item:not(:last-child)::after {
+            content: '/';
+            margin: 0 10px;
+            color: #ccc;
+        }
+        
+        .breadcrumb-item a {
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+        
+        .breadcrumb-item a:hover {
+            text-decoration: underline;
+        }
+        
+        /* Products Section */
+        .products-section {
+            padding: 80px 0;
+            background-color: #fff;
+        }
+        
+        .section-header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        
+        .section-header h2 {
+            font-size: 2rem;
+            color: #2c3e50;
+            position: relative;
+            display: inline-block;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+        
+        .section-header h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 70px;
+            height: 3px;
+            background-color: #4a90e2;
+        }
+        
+        .section-header p {
+            max-width: 700px;
+            margin: 0 auto;
+            color: #555;
+        }
+        
+        /* Products Filters */
+        .products-filters {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 40px;
+            padding: 0 20px;
+        }
+        
+        .filter-options {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+        
+        .filter-btn {
+            padding: 8px 20px;
+            background-color: #f5f7fa;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            color: #555;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .filter-btn:hover, .filter-btn.active {
+            background-color: var(--primary-color);
+            color: white;
+            border-color: var(--primary-color);
+        }
+        
+        .sort-options {
+            position: relative;
+        }
+        
+        .sort-select {
+            padding: 8px 35px 8px 15px;
+            background-color: #f5f7fa;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            color: #555;
+            font-weight: 500;
+            appearance: none;
+            -webkit-appearance: none;
+            cursor: pointer;
+        }
+        
+        .sort-options::after {
+            content: '\f107';
+            font-family: 'Font Awesome 5 Free';
+            font-weight: 900;
+            position: absolute;
+            right: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            pointer-events: none;
+        }
+        
+        /* Products Grid */
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 30px;
+            padding: 0 20px;
+        }
+        
+        .product-card {
+            background-color: #fff;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+        }
+        
+        .product-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .product-image {
+            height: 250px;
+            overflow: hidden;
+            position: relative;
+        }
+        
+        .product-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        
+        .product-card:hover .product-image img {
+            transform: scale(1.1);
+        }
+        
+        .product-tag {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background-color: var(--accent-color);
+            color: white;
+            padding: 5px 10px;
+            border-radius: 3px;
+            font-size: 0.7rem;
+            font-weight: 600;
+            z-index: 1;
+        }
+        
+        .product-details {
+            padding: 20px;
+        }
+        
+        .product-title {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+            color: #2c3e50;
+        }
+        
+        .product-description {
+            font-size: 0.9rem;
+            color: #555;
+            margin-bottom: 15px;
+            line-height: 1.6;
+        }
+        
+        .product-specs {
+            margin-bottom: 15px;
+        }
+        
+        .spec-item {
+            display: flex;
+            font-size: 0.85rem;
+            margin-bottom: 5px;
+            color: #666;
+        }
+        
+        .spec-icon {
+            margin-right: 8px;
+            color: var(--primary-color);
+        }
+        
+        .product-price-action {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .product-price {
+            font-weight: 600;
+            color: var(--primary-color);
+            font-size: 1.1rem;
+        }
+        
+        .price-old {
+            text-decoration: line-through;
+            color: #aaa;
+            font-size: 0.9rem;
+            margin-right: 8px;
+        }
+        
+        .action-buttons {
+            display: flex;
+            gap: 10px;
+        }
+        
+        .shop-btn, .info-btn {
+            display: inline-block;
+            padding: 8px 18px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 0.8rem;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+        
+        .shop-btn {
+            background-color: var(--primary-color);
+            color: white;
+        }
+        
+        .shop-btn:hover {
+            background-color: #357bc8;
+        }
+        
+        .info-btn {
+            background-color: #f5f5f5;
+            color: #333;
+            border: 1px solid #ddd;
+        }
+        
+        .info-btn:hover {
+            background-color: #eee;
+        }
+        
+        /* Pagination */
+        .pagination {
+            display: flex;
+            justify-content: center;
+            margin-top: 60px;
+            gap: 10px;
+        }
+        
+        .page-link {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            color: #555;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        
+        .page-link:hover, .page-link.active {
+            background-color: var(--primary-color);
+            color: white;
+            border-color: var(--primary-color);
+        }
+        
+        /* Why Choose Us Section */
+        .why-choose-section {
+            padding: 80px 0;
+            background-color: var(--light-color);
+        }
+        
+        .why-choose-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+        }
+        
+        .why-choose-card {
+            flex: 1 1 300px;
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+        
+        .why-choose-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .why-choose-icon {
+            font-size: 40px;
+            color: var(--primary-color);
+            margin-bottom: 20px;
+        }
+        
+        .why-choose-title {
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+            color: #2c3e50;
+        }
+        
+        .why-choose-text {
+            color: #555;
+            line-height: 1.7;
+        }
+        
+        /* Call to Action */
+        .cta-section {
+            padding: 80px 0;
+            background: linear-gradient(135deg, #4a90e2 0%, #357bc8 100%);
+            color: white;
+            text-align: center;
+        }
+        
+        .cta-content h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+        
+        .cta-content p {
+            font-size: 1.1rem;
+            margin-bottom: 30px;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .cta-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        
+        .cta-btn {
+            display: inline-block;
+            padding: 12px 30px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        
+        .cta-btn-primary {
+            background-color: white;
+            color: var(--primary-color);
+        }
+        
+        .cta-btn-primary:hover {
+            background-color: var(--dark-color);
+            color: white;
+        }
+        
+        .cta-btn-secondary {
+            background-color: transparent;
+            color: white;
+            border: 2px solid white;
+        }
+        
+        .cta-btn-secondary:hover {
+            background-color: white;
+            color: var(--primary-color);
+        }
+        
+        /* Footer */
+        footer {
+            background-color: #2c3e50;
+            color: #fff;
+            padding: 60px 0 20px;
+        }
+        
+        .footer-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin-bottom: 40px;
+        }
+        
+        .footer-about, .footer-links, .footer-products, .footer-newsletter {
+            flex: 1 1 250px;
+            padding: 0 20px;
+            margin-bottom: 30px;
+        }
+        
+        .footer-logo {
+            height: 40px;
+            margin-bottom: 20px;
+        }
+        
+        .footer-about p {
+            color: #c3cfe2;
+            line-height: 1.7;
+            margin-bottom: 20px;
+        }
+        
+        .footer-social {
+            display: flex;
+            gap: 15px;
+        }
+        
+        .footer-social a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            background-color: rgba(255, 255, 255, 0.1);
+            color: white;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+        }
+        
+        .footer-social a:hover {
+            background-color: #4a90e2;
+        }
+        
+        .footer-heading {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+            color: #fff;
+            position: relative;
+            padding-bottom: 10px;
+        }
+        
+        .footer-heading::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 40px;
+            height: 2px;
+            background-color: #4a90e2;
+        }
+        
+        .footer-links ul li, .footer-products ul li {
+            margin-bottom: 10px;
+        }
+        
+        .footer-links ul li a, .footer-products ul li a {
+            color: #c3cfe2;
+            text-decoration: none;
+            transition: color 0.3s;
+            display: block;
+        }
+        
+        .footer-links ul li a:hover, .footer-products ul li a:hover {
+            color: #fff;
+            padding-left: 5px;
+        }
+        
+        .footer-newsletter p {
+            color: #c3cfe2;
+            line-height: 1.7;
+            margin-bottom: 20px;
+        }
+        
+        .newsletter-form {
+            display: flex;
+        }
+        
+        .newsletter-input {
+            flex: 1;
+            padding: 10px;
+            border: none;
+            border-radius: 5px 0 0 5px;
+            font-size: 0.9rem;
+        }
+        
+        .newsletter-btn {
+            background-color: #4a90e2;
+            color: white;
+            border: none;
+            padding: 0 15px;
+            border-radius: 0 5px 5px 0;
+            cursor: pointer;
+        }
+        
+        .newsletter-btn:hover {
+            background-color: #357bc8;
+        }
+        
+        .footer-bottom {
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: 20px;
+            text-align: center;
+        }
+        
+        .footer-bottom p {
+            color: #c3cfe2;
+            font-size: 0.9rem;
+        }
+        
+        /* Back to Top Button */
+        .back-to-top {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            width: 40px;
+            height: 40px;
+            background-color: #4a90e2;
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            z-index: 99;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+        }
+        
+        .back-to-top.show {
+            opacity: 1;
+            visibility: visible;
+        }
+        
+        .back-to-top:hover {
+            background-color: #357bc8;
+            transform: translateY(-3px);
+        }
+        
+        /* Animations */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        /* Responsive Styles */
+        @media (max-width: 992px) {
+            .hero-content h1 {
+                font-size: 2.2rem;
+            }
+            
+            .hero-content p {
+                font-size: 1rem;
+            }
+            
+            .products-filters {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 20px;
+            }
+            
+            .filter-options {
+                width: 100%;
+                justify-content: flex-start;
+                overflow-x: auto;
+                padding-bottom: 10px;
+            }
+            
+            .sort-options {
+                width: 100%;
+            }
+            
+            .sort-select {
+                width: 100%;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .hamburger {
+                display: block;
+            }
+            
+            nav ul {
+                display: none;
+            }
+            
+            .hero-content h1 {
+                font-size: 1.8rem;
+            }
+            
+            .section-header h2 {
+                font-size: 1.8rem;
+            }
+            
+            .product-card {
+                max-width: 320px;
+                margin: 0 auto;
+            }
+            
+            .cta-content h2 {
+                font-size: 2rem;
+            }
+            
+            .cta-content p {
+                font-size: 1rem;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            section {
+                padding: 60px 0;
+            }
+            
+            .hero-content h1 {
+                font-size: 1.6rem;
+            }
+            
+            .hero-content p {
+                font-size: 0.9rem;
+            }
+            
+            .section-header h2 {
+                font-size: 1.6rem;
+            }
+            
+            .products-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .cta-content h2 {
+                font-size: 1.8rem;
+            }
+            
+            .cta-buttons {
+                flex-direction: column;
+                gap: 15px;
+            }
+            
+            .pagination {
+                gap: 5px;
+            }
+            
+            .page-link {
+                width: 35px;
+                height: 35px;
+            }
+        }
+
+          /* Additional Mobile Menu Styles for Small Screens */
+          @media (max-width: 780px) {
+            .hamburger {
+                display: block;
+            }
+            
+            nav ul {
+                display: none;
+            }
+            
+            .mobile-menu {
+                display: block; /* Change from 'none' to 'block' */
+                max-height: 0; /* Start with 0 height */
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header/Navigation -->
+    <header id="header">
+        <div class="container header-container">
+            <div class="logo">
+                <img src="logo.png" alt="Aura Family Galore Logo" style="height: 60px; margin-right: 15px;">
+                <div style="display: flex; flex-direction: column; justify-content: center;">
+                    <span style="font-size: 28px; font-weight: 700; color: #4a90e2; line-height: 1.2;">Aura</span>
+                    <span style="font-size: 20px; font-weight: 600; color: #34495e; line-height: 1.2;">Family Galore</span>
+                </div>
+            </div>
+            
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html#products">Products</a></li>
+                    <li><a href="index.html#about">About</a></li>
+                    <li><a href="index.html#services">Services</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
+                </ul>
+            </nav>
+            
+            <button class="hamburger" aria-label="Menu Toggle">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div class="mobile-menu">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#products">Products</a></li>
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="index.html#services">Services</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container hero-container">
+            <div class="hero-content">
+                <h1>Quality Commode Chairs</h1>
+                <p>Explore our comprehensive collection of high-quality commode chairs designed to provide comfort, dignity, and independence for users in home care settings.</p>
+                <a href="#commode-products" class="btn">View Collection</a>
+            </div>
+            <div class="hero-image">
+                <img src="commodechair.png" alt="Premium Commode Chair">
+            </div>
+        </div>
+        <div class="wave-divider"></div>
+    </section>
+
+    <!-- Breadcrumb -->
+    <div class="breadcrumb">
+        <div class="container">
+            <ul class="breadcrumb-list">
+                <li class="breadcrumb-item"><a href="index.html#home">Home</a></li>
+                <li class="breadcrumb-item"><a href="index.html#products">Products</a></li>
+                <li class="breadcrumb-item">Commode Chairs</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Products Section -->
+    <section id="commode-products" class="products-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our Commode Chair Range</h2>
+                <p>Discover our comprehensive range of commode chairs designed to provide comfort, convenience, and dignity for users in home care settings.</p>
+            </div>
+            
+            <div class="products-filters">
+                <div class="filter-options">
+                    <button class="filter-btn active">All</button>
+                    <button class="filter-btn">Standard</button>
+                    <button class="filter-btn">With Bucket</button>
+                    <button class="filter-btn">With Back Rest</button>
+                    <button class="filter-btn">Premium</button>
+                </div>
+                
+                <div class="sort-options">
+                    <select class="sort-select">
+                        <option value="default">Default Sorting</option>
+                        <option value="price-low">Price: Low to High</option>
+                        <option value="price-high">Price: High to Low</option>
+                        <option value="newest">Newest First</option>
+                        <option value="popularity">Popularity</option>
+                    </select>
+                </div>
+            </div>
+            
+            <div class="products-grid">
+                <!-- Product 1 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <span class="product-tag">Best Seller</span>
+                        <img src="Commode Stand With Bucket.jpeg" alt="Commode Stand With Bucket">
+                    </div>
+                    <div class="product-details">
+                        <h3 class="product-title">Commode Stand With Bucket</h3>
+                        <p class="product-description">Practical commode stand with removable bucket for convenient use and easy cleaning. Sturdy construction for stability and safety.</p>
+                        <div class="product-specs">
+                            <div class="spec-item"><i class="fas fa-tag spec-icon"></i> Brand: MG / Home Care</div>
+                            <div class="spec-item"><i class="fas fa-weight spec-icon"></i> Weight Capacity: 100kg</div>
+                            <div class="spec-item"><i class="fas fa-cog spec-icon"></i> Adjustable Height: Yes</div>
+                        </div>
+                        <div class="product-price-action">
+                            <span class="product-price">Rs. 8,500</span>
+                            <div class="action-buttons">
+                                <a href="https://wa.me/94766555604?text=I'm%20interested%20in%20purchasing%20the%20Commode%20Stand%20With%20Bucket" target="_blank" class="shop-btn">Shop Now</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Product 2 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="Commode Chair With Back Rest.jpeg" alt="Commode Chair With Back Rest">
+                    </div>
+                    <div class="product-details">
+                        <h3 class="product-title">Commode Chair With Back Rest</h3>
+                        <p class="product-description">Comfortable commode chair with supportive back rest for added comfort and security during use. Ideal for elderly and disabled users.</p>
+                        <div class="product-specs">
+                            <div class="spec-item"><i class="fas fa-tag spec-icon"></i> Brand: MG / SOFTA</div>
+                            <div class="spec-item"><i class="fas fa-weight spec-icon"></i> Weight Capacity: 110kg</div>
+                            <div class="spec-item"><i class="fas fa-cog spec-icon"></i> Padded Seat: Yes</div>
+                        </div>
+                        <div class="product-price-action">
+                            <span class="product-price">Rs. 9,500</span>
+                            <div class="action-buttons">
+                                <a href="https://wa.me/94766555604?text=I'm%20interested%20in%20purchasing%20the%20Commode%20Chair%20With%20Back%20Rest" target="_blank" class="shop-btn">Shop Now</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Product 3 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="Commode Chair Gray.jpeg" alt="Commode Chair Gray">
+                    </div>
+                    <div class="product-details">
+                        <h3 class="product-title">Commode Chair Gray</h3>
+                        <p class="product-description">Modern gray commode chair with sleek design and durable construction. Easy to clean and maintain for long-term use.</p>
+                        <div class="product-specs">
+                            <div class="spec-item"><i class="fas fa-tag spec-icon"></i> Brand: MG / SOFTA</div>
+                            <div class="spec-item"><i class="fas fa-weight spec-icon"></i> Weight Capacity: 120kg</div>
+                            <div class="spec-item"><i class="fas fa-cog spec-icon"></i> Non-slip Feet: Yes</div>
+                        </div>
+                        <div class="product-price-action">
+                            <span class="product-price">Rs. 11,000</span>
+                            <div class="action-buttons">
+                                <a href="https://wa.me/94766555604?text=I'm%20interested%20in%20purchasing%20the%20Commode%20Chair%20Gray" target="_blank" class="shop-btn">Shop Now</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Product 4 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <span class="product-tag">Premium</span>
+                        <img src="Softa Commode Chair White.jpeg" alt="Softa Commode Chair White">
+                    </div>
+                    <div class="product-details">
+                        <h3 class="product-title">Softa Commode Chair White</h3>
+                        <p class="product-description">Premium white commode chair with enhanced comfort features and elegant design. Provides superior support and stability for users of all sizes.</p>
+                        <div class="product-specs">
+                            <div class="spec-item"><i class="fas fa-tag spec-icon"></i> Brand: Softa</div>
+                            <div class="spec-item"><i class="fas fa-weight spec-icon"></i> Weight Capacity: 150kg</div>
+                            <div class="spec-item"><i class="fas fa-cog spec-icon"></i> Easy Assembly: Yes</div>
+                        </div>
+                        <div class="product-price-action">
+                            <span class="product-price">Rs. 14,850</span>
+                            <div class="action-buttons">
+                                <a href="https://wa.me/94766555604?text=I'm%20interested%20in%20purchasing%20the%20Softa%20Commode%20Chair%20White" target="_blank" class="shop-btn">Shop Now</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Product 5 -->
+               
+                
+                <!-- Product 6 -->
+                
+            
+            <div class="pagination">
+                <a href="#" class="page-link active">1</a>
+                <a href="#" class="page-link"><i class="fas fa-chevron-right"></i></a>
+            </div>
+        </div>
+    </section>
+    
+   
+    <!-- Why Choose Us Section -->
+    <section class="why-choose-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Why Choose Our Wheelchairs</h2>
+                <p>At Aura Family Galore, we are committed to providing high-quality mobility solutions that enhance independence and quality of life.</p>
+            </div>
+            
+            <div class="why-choose-container">
+                <div class="why-choose-card">
+                    <div class="why-choose-icon">
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h3 class="why-choose-title">Premium Quality</h3>
+                    <p class="why-choose-text">All our wheelchairs are crafted from high-quality materials to ensure durability, stability, and long-lasting performance for years of reliable use.</p>
+                </div>
+                
+                <div class="why-choose-card">
+                    <div class="why-choose-icon">
+                        <i class="fas fa-wheelchair"></i>
+                    </div>
+                    <h3 class="why-choose-title">Comfort & Support</h3>
+                    <p class="why-choose-text">Designed with user comfort in mind, our wheelchairs feature ergonomic seating, padded armrests, and customizable support options for extended use.</p>
+                </div>
+                
+                <div class="why-choose-card">
+                    <div class="why-choose-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3 class="why-choose-title">Safety First</h3>
+                    <p class="why-choose-text">Your safety is our priority. Our wheelchairs include features like sturdy frames, reliable braking systems, and anti-tip mechanisms.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Call to Action -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Need Help Choosing the Right Wheelchair?</h2>
+                <p>Our team of experts is ready to assist you in finding the perfect wheelchair to meet your specific needs and requirements.</p>
+                <div class="cta-buttons">
+                    <a href="https://wa.me/94766555604?text=I'd%20like%20to%20get%20expert%20advice%20on%20choosing%20a%20wheelchair" target="_blank" class="cta-btn cta-btn-primary">Get Expert Advice</a>
+                    <a href="index.html#contact" class="cta-btn cta-btn-secondary">Contact Us</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-container">
+                <div class="footer-about">
+                    <img class="footer-logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMTAwIj48dGV4dCB4PSI1MCIgeT0iNTAiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSIyNCIgZm9udC13ZWlnaHQ9ImJvbGQiIGZpbGw9IiNmZmZmZmYiPkF1cmE8L3RleHQ+PHRleHQgeD0iNTAiIHk9IjgwIiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMTgiIGZpbGw9IiNjM2NmZTIiPkZhbWlseSBHYWxvcmU8L3RleHQ+PC9zdmc+" alt="Aura Family Galore Logo">
+                    <p>First Ever Family Health & Nutraceutical shop in Kandy. Largest retailer and wholesaler in medical equipments and nutrition supplements.</p>
+                    <div class="footer-social">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="https://wa.me/94766555604" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-links">
+                    <h4 class="footer-heading">Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="index.html#products">Products</a></li>
+                        <li><a href="index.html#about">About Us</a></li>
+                        <li><a href="index.html#services">Services</a></li>
+                        <li><a href="index.html#contact">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-products">
+                    <h4 class="footer-heading">Products</h4>
+                    <ul>
+                        <li><a href="#">Wheelchairs</a></li>
+                        <li><a href="#">Hospital Beds</a></li>
+                        <li><a href="#">Walking Aids</a></li>
+                        <li><a href="#">Medical Devices</a></li>
+                        <li><a href="#">Nutritional Supplements</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-newsletter">
+                    <h4 class="footer-heading">Newsletter</h4>
+                    <p>Subscribe to our newsletter to receive updates on new products, special offers, and health tips.</p>
+                    <form class="newsletter-form">
+                        <input type="email" class="newsletter-input" placeholder="Your Email Address" required>
+                        <button type="submit" class="newsletter-btn">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 Aura Family Galore. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <a href="#" class="back-to-top" id="backToTop" aria-label="Back to Top">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+
+    <!-- JavaScript -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Mobile Menu Toggle
+            const hamburger = document.querySelector('.hamburger');
+            const mobileMenu = document.querySelector('.mobile-menu');
+            
+            hamburger.addEventListener('click', function() {
+                mobileMenu.classList.toggle('active');
+                hamburger.innerHTML = mobileMenu.classList.contains('active') ? 
+                    '<i class="fas fa-times"></i>' : '<i class="fas fa-bars"></i>';
+            });
+            
+            // Close mobile menu when clicking on a link
+            document.querySelectorAll('.mobile-menu a').forEach(link => {
+                link.addEventListener('click', function() {
+                    mobileMenu.classList.remove('active');
+                    hamburger.innerHTML = '<i class="fas fa-bars"></i>';
+                });
+            });
+            
+            // Sticky header
+            const header = document.getElementById('header');
+            window.addEventListener('scroll', function() {
+                if (window.scrollY > 100) {
+                    header.classList.add('scrolled');
+                } else {
+                    header.classList.remove('scrolled');
+                }
+            });
+            
+            // Filter buttons
+            const filterButtons = document.querySelectorAll('.filter-btn');
+            
+            filterButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    filterButtons.forEach(btn => btn.classList.remove('active'));
+                    this.classList.add('active');
+                    // Logic for filtering products would go here
+                });
+            });
+            
+            // Back to top button
+            const backToTopButton = document.getElementById('backToTop');
+            
+            window.addEventListener('scroll', function() {
+                if (window.scrollY > 500) {
+                    backToTopButton.classList.add('show');
+                } else {
+                    backToTopButton.classList.remove('show');
+                }
+            });
+            
+            backToTopButton.addEventListener('click', function(e) {
+                e.preventDefault();
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            });
+            
+            // Newsletter form submission
+            const newsletterForm = document.querySelector('.newsletter-form');
+            
+            if (newsletterForm) {
+                newsletterForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    alert('Thank you for subscribing to our newsletter!');
+                    newsletterForm.reset();
+                });
+            }
+            
+            // Product card hover effect
+            const productCards = document.querySelectorAll('.product-card');
+            
+            productCards.forEach(card => {
+                card.addEventListener('mouseenter', function() {
+                    this.style.transform = 'translateY(-10px)';
+                    this.style.boxShadow = '0 15px 30px rgba(0, 0, 0, 0.1)';
+                    
+                    const image = this.querySelector('img');
+                    if (image) {
+                        image.style.transform = 'scale(1.1)';
+                    }
+                });
+                
+                card.addEventListener('mouseleave', function() {
+                    this.style.transform = 'translateY(0)';
+                    this.style.boxShadow = '0 5px 15px rgba(0, 0, 0, 0.05)';
+                    
+                    const image = this.querySelector('img');
+                    if (image) {
+                        image.style.transform = 'scale(1)';
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
